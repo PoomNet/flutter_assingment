@@ -15,14 +15,6 @@ class Loginstate extends State<Loginpage> {
   final _formKey = GlobalKey<FormState>();
   var user = "";
   var pass = "";
-  showsnackbar1() {
-    final snackBar = new SnackBar(
-      content: new Text("this"),
-      duration: new Duration(seconds: 3),
-      backgroundColor: Colors.red,
-    );
-    // _scafkey.currentState.showSnackBar(snackBar);
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -39,19 +31,9 @@ class Loginstate extends State<Loginpage> {
                 TextFormField(
                   decoration: InputDecoration(
                       icon: Icon(Icons.account_circle),
-                      // labelText: 'E-mail',
                       hintText: 'User ID'),
                   validator: (value) {
-                    // if (value.isEmpty) {
-                    //   _scafkey.currentState.showSnackBar(SnackBar(
-                    //       content: Text('“กรุณา ระบุ user or password'),
-                    //       duration: Duration(seconds: 3),
-                    //       backgroundColor: Colors.red,
-                    //     ));
-                    //   return 'กรุณาระบุ user';
-                    // } else {
                       user = value;
-                    // }
                   },
                   keyboardType: TextInputType.text,
                   onSaved: (value) => print(value),
@@ -59,19 +41,9 @@ class Loginstate extends State<Loginpage> {
                 TextFormField(
                   decoration: InputDecoration(
                       icon: Icon(Icons.lock),
-                      // labelText: 'Password',
                       hintText: 'Password'),
                   validator: (value) {
-                    // if (value.isEmpty) {
-                    //   _scafkey.currentState.showSnackBar(SnackBar(
-                    //       content: Text('“กรุณา ระบุ user or password'),
-                    //       duration: Duration(seconds: 3),
-                    //       backgroundColor: Colors.red,
-                    //     ));
-                    //   return 'กรุณาระบุ password';
-                    // } else {
                       pass = value;
-                    // }
                   },
                   obscureText: true,
                   keyboardType: TextInputType.text,
@@ -79,7 +51,6 @@ class Loginstate extends State<Loginpage> {
                 ),
                 RaisedButton(
                     child: Text("Login"),
-                    // key: _scafkey,
                     onPressed: () {
                       _formKey.currentState.validate();
                       if(user == "" || pass == ""){
@@ -100,7 +71,6 @@ class Loginstate extends State<Loginpage> {
                           duration: Duration(seconds: 3),
                           backgroundColor: Colors.red,
                         ));
-                        // showsnackbar1();
                       }
                     }),
                 Align(
@@ -121,9 +91,5 @@ class Loginstate extends State<Loginpage> {
             ),
           ),
         ));
-    // return Form(
-    //   key: _formKey,
-    //   child: ListView(),
-    // );
   }
 }

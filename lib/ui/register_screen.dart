@@ -36,7 +36,6 @@ class RegisterPageState extends State<RegisterPage> {
                           hintText: 'Please Enter User ID'),
                       validator: (value) {
                         if (value.isEmpty) {
-                          // return 'Please enter some text';
                         } else {
                           check += 1;
                           user = value;
@@ -51,7 +50,6 @@ class RegisterPageState extends State<RegisterPage> {
                           hintText: 'Please Enter Password'),
                       validator: (value) {
                         if (value.isEmpty) {
-                          // return 'Please enter some text';
                         } else {
                           pass = value;
                           check += 1;
@@ -67,7 +65,6 @@ class RegisterPageState extends State<RegisterPage> {
                           hintText: 'Please Re-Enter Password'),
                       validator: (value) {
                         if (value.isEmpty) {
-                          // return 'Please enter some text';
                         } else {
                           check += 1;
                           re_pass = value;
