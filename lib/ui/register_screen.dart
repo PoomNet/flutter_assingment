@@ -75,7 +75,7 @@ class RegisterPageState extends State<RegisterPage> {
                       onSaved: (value) => print(value),
                     ),
                     RaisedButton(
-                        child: Text("Register"),
+                        child: Text("Continue"),
                         onPressed: () {
                           fkey.currentState.validate();
                           if (check != 3) {
