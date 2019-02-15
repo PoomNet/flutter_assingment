@@ -60,18 +60,20 @@ class Loginstate extends State<Loginpage> {
                           backgroundColor: Colors.red,
                         ));
                       }
-                      else if (user == "admin" && pass == "admin") {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => HomePage()));
-                      } else {
+                      else if(user == "admin" && pass == "admin"){
                         _scafkey.currentState.showSnackBar(SnackBar(
                           content: Text('user or password ไม่ถูกต้อง'),
                           duration: Duration(seconds: 3),
                           backgroundColor: Colors.red,
                         ));
                       }
+                      else {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => HomePage()));
+                      } 
+                      
                     }),
                 Align(
                     alignment: Alignment.bottomRight,

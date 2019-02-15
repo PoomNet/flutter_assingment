@@ -17,8 +17,14 @@ class HomePage extends StatefulWidget{
       length: 5,
       child: Scaffold(
         appBar: AppBar(
-          title: Text("flutter"),
-          bottom: TabBar(
+          title: Text(
+          "Home",
+          textAlign: TextAlign.center,),
+        ),
+        bottomNavigationBar: Container(
+          color: Colors.yellow,
+        child: TabBar(
+          indicatorColor: Colors.white,
             tabs: <Widget>[
               Tab(
                 icon: Icon(Icons.home),
@@ -77,6 +83,7 @@ class HomePage extends StatefulWidget{
             )
           ],
         ),
+        
       ),
     );
   }

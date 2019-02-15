@@ -33,7 +33,7 @@ class RegisterPageState extends State<RegisterPage> {
                     TextFormField(
                       decoration: InputDecoration(
                           icon: Icon(Icons.account_circle),
-                          hintText: 'Please Enter User ID'),
+                          hintText: 'Please Enter E-mail'),
                       validator: (value) {
                         if (value.isEmpty) {
                         } else {
@@ -41,12 +41,12 @@ class RegisterPageState extends State<RegisterPage> {
                           user = value;
                         }
                       },
-                      keyboardType: TextInputType.text,
+                      keyboardType: TextInputType.emailAddress,
                       onSaved: (value) => print(value),
                     ),
                     TextFormField(
                       decoration: InputDecoration(
-                          icon: Icon(Icons.account_circle),
+                          icon: Icon(Icons.lock),
                           hintText: 'Please Enter Password'),
                       validator: (value) {
                         if (value.isEmpty) {
@@ -61,7 +61,7 @@ class RegisterPageState extends State<RegisterPage> {
                     ),
                     TextFormField(
                       decoration: InputDecoration(
-                          icon: Icon(Icons.account_circle),
+                          icon: Icon(Icons.lock),
                           hintText: 'Please Re-Enter Password'),
                       validator: (value) {
                         if (value.isEmpty) {
